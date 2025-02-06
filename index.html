@@ -9,14 +9,20 @@
 <body>
   <h1>Registration Form</h1>
   <p>Please fill out this form with the required information</p>
-  <form action="#" method="POST"></form>
-  <fieldset>
-    <label for="">First Name:</label>
-    <label for="">Last Name:</label>
-    <label for="">Email:</label>
-    <label for="">New Password:</label>
-  </fieldset>
-  <fieldset></fieldset>
-  <fieldset></fieldset>
+  <form action="https://register-demo.freecodecamp.org" method="POST">
+    <fieldset>
+      <label for="first-name">First Name: <input type="text" id="first-name" required></label>
+      <label for="last-name">Last Name: <input type="text"id="last-name" required></label>
+      <label for="email">Email: <input type="email" id="email" required></label>
+      <label for="new-password">New Password: <input type="password" id="new-password" required pattern="[a-z0-5]{8,}"></label>
+    </fieldset>
+    <fieldset>
+      <legend>Account type (required)</legend>
+      <label for=""><input type="radio" name="account-type" id="" checked> Personal</label>
+      <label for=""><input type="radio" name="account-type" id=""> Business</label>
+    </fieldset>
+    <fieldset></fieldset>
+    <input type="submit" value="Submit">
+  </form>
 </body>
 </html>
