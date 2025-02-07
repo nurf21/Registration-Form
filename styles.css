@@ -18,6 +18,7 @@ form {
   max-width: 500px;
   min-width: 300px;
   width: 60vw;
+  padding-bottom: 2em;
 }
 
 fieldset {
@@ -33,9 +34,42 @@ fieldset:last-of-type {
 input, textarea, select {
   width: 100%;
   margin: 10px 0 0 0;
+  min-height: 2em;
+}
+
+input, textarea {
+  background-color: #E8F5E9;
+  border: 1px solid #1B5E20;
+  color: #1B5E20;
+}
+
+.inline {
+  width: unset;
+  margin: 0 0.5em 0 0;
+  vertical-align: middle;
 }
 
 label {
   display: block;
   margin: 0.5rem 0;
+}
+
+input[type="file"] {
+  padding: 1px 2px;
+}
+
+input[type="submit"] {
+  display: block;
+  width: 60%;
+  min-width: 300px;
+  margin: 1em auto;
+  height: 2em;
+  font-size : 1.1rem;
+  background-color: #1B5E20;
+  border-color: white;
+  color: #E8F5E9;
+}
+
+a {
+  color: #1B5E20;
 }
