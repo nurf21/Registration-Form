@@ -11,18 +11,31 @@
   <p>Please fill out this form with the required information</p>
   <form action="https://register-demo.freecodecamp.org" method="POST">
     <fieldset>
-      <label for="first-name">First Name: <input type="text" id="first-name" required></label>
-      <label for="last-name">Last Name: <input type="text"id="last-name" required></label>
-      <label for="email">Email: <input type="email" id="email" required></label>
-      <label for="new-password">New Password: <input type="password" id="new-password" required pattern="[a-z0-5]{8,}"></label>
+      <label for="first-name">First Name: <input type="text" name="first-name" id="first-name" required></label>
+      <label for="last-name">Last Name: <input type="text" name="last-name" id="last-name" required></label>
+      <label for="email">Email: <input type="email" name="email" id="email" required></label>
+      <label for="new-password">New Password: <input type="password" name="password" id="new-password" required pattern="[a-z0-5]{8,}"></label>
     </fieldset>
     <fieldset>
       <legend>Account type (required)</legend>
-      <label for="personal-account"><input type="radio" name="account-type" id="personal-account" checked> Personal</label>
-      <label for="business-account"><input type="radio" name="account-type" id="business-account"> Business</label>
+      <label for="personal-account"><input type="radio" name="account-type" id="personal-account" class="inline" checked> Personal</label>
+      <label for="business-account"><input type="radio" name="account-type" id="business-account" class="inline"> Business</label>
     </fieldset>
-    <fieldset></fieldset>
-    <label for="terms-and-conditions"><input type="checkbox" name="" id="terms-and-conditions" required></label>
+    <fieldset>
+      <label for="profile-picture">Upload a profile picture: <input type="file" name="profile-picture" id="profile-picture"></label>
+      <label for="age">Input your age (years): <input type="number" name="age" id="age" min="13" max="120"></label>
+      <label for="referrer">How did you hear about us?
+        <select name="referrer" id="referrer">
+          <option value="">(select one)</option>
+          <option value="1">News</option>
+          <option value="2">YouTube Channel</option>
+          <option value="3">Forum</option>
+          <option value="4">Other</option>
+        </select>
+      </label>
+      <label for="bio">Provide a bio:<textarea name="bio" id="bio" rows="3" cols="30" placeholder="Tell us a little bit about yourself..."></textarea></label>
+    </fieldset>
+    <label for="terms-and-conditions"><input type="checkbox" name="terms" id="terms-and-conditions" required>I accept the <a href="terms-and-conditions.html">terms and conditions</a></label>
     <input type="submit" value="Submit">
   </form>
 </body>
