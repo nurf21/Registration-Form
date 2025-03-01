@@ -20,7 +20,8 @@
         <label for="email">Email:</label>
         <input type="email" name="email" id="email" placeholder="Enter your email address" required>
         <label for="new-password">New Password:</label>
-        <input type="password" name="password" id="new-password" placeholder="Enter a strong password" required pattern="[a-z0-5]{8,}">
+        <input type="password" name="password" id="new-password" placeholder="Enter a strong password" required pattern="[a-zA-Z0-9]{8,}">
+        <small id="password-hint">Password must be at least 8 characters long and contain letters and numbers.</small>
       </fieldset>
       <fieldset>
         <legend>Account Type</legend>
@@ -36,7 +37,7 @@
       <fieldset>
         <legend>Additional Information</legend>
         <label for="profile-picture">Upload a profile picture:</label>
-        <input type="file" name="profile-picture" id="profile-picture">
+        <input type="file" name="profile-picture" id="profile-picture" accept="image/*">
         <label for="age">Input your age (years):</label>
         <input type="number" name="age" id="age" min="13" max="120" placeholder="Enter your age">
         <label for="referrer">How did you hear about us?</label>
